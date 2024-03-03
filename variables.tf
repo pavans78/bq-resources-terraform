@@ -40,3 +40,30 @@ variable "table-pf" {
     partitioning_type        = string
   }))
 }
+
+##### SERVICE ACCOUNT VARIABLES #####
+variable "service_account" {
+  type = object({
+    account_id   = string
+    display_name = string
+  })
+}
+
+##### SERVICE ACCOUNT ROLES #####
+variable "sa_roles" {
+  type = object({
+    project_roles = list(string)
+    prefix        = string
+  })
+}
+
+##### BQ Scheduled Queries #####
+variable "scheduled_queries" {
+  type = object({
+    name = string
+    #sa_email   = string
+    query_path = string
+    dataset_id = string
+  })
+}
+
