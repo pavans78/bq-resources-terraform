@@ -45,3 +45,21 @@ table-pf = {
     partitioning_type        = "YEAR"
   }
 }
+
+##### BQ Scheduled Queries #####
+scheduled_queries = {
+  name = "bq-schedued-query"
+  query_path = "../src/scheduledqueries/schedued-query.sql"
+  dataset_id = "test_dataset_id"
+}
+
+##### Service account #####
+service_account = {
+  account_id   = "sa-bq-scheduled-query"
+  display_name = "Service Account for scheduled queries"
+}
+
+sa_roles = {
+  project_roles = ["roles/bigquery.admin", "roles/bigquery.jobUser"]
+  prefix        = "serviceAccount"
+}
