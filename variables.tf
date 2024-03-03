@@ -67,3 +67,12 @@ variable "scheduled_queries" {
   })
 }
 
+##### BQ view #####
+variable "view" {
+  type = object({
+    dataset_id  = string
+    table_id    = string
+    description = string
+    query       = string
+  })
+}
