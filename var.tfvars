@@ -63,3 +63,11 @@ sa_roles = {
   project_roles = ["roles/bigquery.admin", "roles/bigquery.jobUser"]
   prefix        = "serviceAccount"
 }
+
+##### BQ views #####
+view = {
+  dataset_id  = "test_dataset_id"
+  table_id    = "my1"
+  description = "BQ Table used for example source"
+  query       = "SELECT country_name, geo_id, population, longitude_centroid, latitude_centroid, alpha_3_code, last_updated FROM firm-shuttle-413014.test_dataset_id.table1 WHERE DATE(last_updated) >= '2020-05-12' LIMIT 10"
+}
