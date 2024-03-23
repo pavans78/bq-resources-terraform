@@ -1,5 +1,5 @@
 # Big Query-Terraform
-Terraform for GCP Bigquery. This repo contains how to create the datasets, tables and tables using partitioning and for-each for creating more than one repo.
+Terraform for GCP Bigquery. This repo contains how to create the datasets, tables , tables using partitioning, bigquery views and scheduled Query.
 
 ## Try it out
 
